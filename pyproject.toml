@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "DICOM-viewer-service"
+version = "0.1.0"
+description = "Viewer for DICOM files"
+authors = ["ZhovtenkoA <zhowtenko.oleksiy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+start = "cd app && uvicorn main:app --reload"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.0"
+pydicom = "^3.0.1"
+python-multipart = "^0.0.20"
+aiofiles = "^24.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
